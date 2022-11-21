@@ -8,7 +8,7 @@ Just an easy introduction to OOP. We just need use `class` to define how a `stud
 
 But what is worth to sat that, when the first time I tried to solve this problem, I used private type to store names and scores. This is absolutely good habit, but not so convenient in this assignment. It will leads much more operations when you're trying to get an average or maximum of all the scores. So I just turned them into public type. Just for the first introduction assignment! 🤣
 
----
+
 
 ## 结语
 
