@@ -1,40 +1,54 @@
+/* By Meng Qingjia Student ID: 3200102825 */
+/* Date March 3rd 2023 */
+/* STL containers such as vectors are used, though we haven't learnt it. */
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-class students{
+// A students class with scores and the functions used during program.
+class students
+{
 public:
     string name;
     int course1;
     int course2;
     int course3;
     double average;
+
 public:
     void makeAverage();
     void getScores();
     void Print();
 };
 
-void students::makeAverage(){
-    this->average = (double)(this->course1 + this->course2 + this->course3)/3;
+// The function is used to get the average of each student.
+void students::makeAverage()
+{
+    this->average = (double)(this->course1 + this->course2 + this->course3) / 3;
 }
 
-void students::getScores(){
+// The function is used to get input of each student.
+void students::getScores()
+{
     cin >> this->name >> this->course1 >> this->course2 >> this->course3;
 }
 
-void students::Print(){
+// The function is used to output the scores of a specific student.
+void students::Print()
+{
     cout << this->name << '\t' << this->course1 << '\t' << this->course2 << '\t' << this->course3 << '\t' << this->average << endl;
 }
 
-int main(){
+int main()
+{
     vector<students> list(10);
     vector<double> sums(3, 0);
     vector<int> mina(3, 5);
-    vector<int> maxa(3, 0); 
-    for(int i = 0; i < 10; i++){
+    vector<int> maxa(3, 0);
+    for (int i = 0; i < 10; i++)
+    {
         list[i].getScores();
         list[i].makeAverage();
         mina[0] = min(list[i].course1, mina[0]);
@@ -47,10 +61,12 @@ int main(){
         sums[1] += list[i].course2;
         sums[2] += list[i].course3;
     }
-    for(int i = 0; i < 3; i++) sums[i] /= 10;
+    for (int i = 0; i < 3; i++)
+        sums[i] /= 10;
     cout << "no\tname\tscore1\tscore2\tscore3\taverage" << endl;
-    for(int i = 0; i < 10; i++){
-        cout << i+1 << '\t';
+    for (int i = 0; i < 10; i++)
+    {
+        cout << i + 1 << '\t';
         list[i].Print();
     }
     cout << "\taverage\t" << sums[0] << "\t" << sums[1] << "\t" << sums[2] << "\t" << endl;
