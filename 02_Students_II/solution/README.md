@@ -1,6 +1,6 @@
-#How to build my proj
+# How to build my proj
 
-##Use CMake
+## Use CMake
 
 ```shell
 cd {solutionPATH}
@@ -10,14 +10,14 @@ cmake ..
 make
 ```
 
-##Use Compiler(Clang or g++)
+## Use Compiler(Clang or g++)
 
 ```shell
 cd {solutionPATH}
 g++ main.cpp -o Assignment2
 ```
 
-#How to use my program
+# How to use my program
 
 ```shell
 ./Assignment2 {{DataFilePATH}}
